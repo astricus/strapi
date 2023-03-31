@@ -16,6 +16,8 @@ services:
       ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET}
       DATABASE_PASSWORD: ${DATABASE_PASSWORD}
       NODE_ENV: production
+    networks:
+      - internal-network
     volumes:
       - ./config:/opt/app/config
       - ./src:/opt/app/src
